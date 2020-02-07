@@ -1,0 +1,8 @@
+da se definiraat dve ruti
+
+get /iminja
+post /iminja
+
+koga se izvrshuva "get /iminja" treba da se prochita iminja.txt fajlot i da se prikazhat iminjata koi se naogjaat vo nego.
+
+koga se izvrshuva "post /iminja" treba da se zapishe novo ime vo iminja.txt fajlot. Imeto treba da se prati kako post promenliva so koja kje se vika "ime"
