@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/students" method="post">
+        <input type="text" name="first_name" placeholder="first name" required="required"/>
+        <input type="text" name="last_name" placeholder="last name" required="required"/>
+        <input type="text" name="address" placeholder="address" required="required"/>
+        <input type="number" name="avg_grade" placeholder="avg grade" required="required"/>
+        <button type="submit">+</button>
+    </form>
+    <br/><hr/><br/>
+    <table border="1" width="80%">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>Avg. Grade</th>
+        </tr>
+        {{#each students}}
+        <tr id="id_{{this.id}}">
+            <td>{{this.first_name}}</td>
+            <td>{{this.last_name}}</td>
+            <td>{{this.address}}</td>
+            <td>{{this.avg_grade}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</body>
+</html>
