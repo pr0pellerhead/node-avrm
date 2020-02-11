@@ -1,1 +1,61 @@
-[{"id":1975481726,"first_name":"Jonn","last_name":"Smith","address":"str. Lombard 234","avg_grade":8.3},{"id":7635427863,"first_name":"Sam","last_name":"Doe","address":"str. Blackhill 65","avg_grade":9.6},{"id":5349583940,"first_name":"Eve","last_name":"Jones","address":"str. Walters 21.32","avg_grade":7},{"id":3742873930,"first_name":"Jenna","last_name":"Dorsey","address":"str. Main 122","avg_grade":10},{"id":1581350282929,"first_name":"","last_name":"","address":"","avg_grade":0},{"id":1581350297141,"first_name":"test","last_name":"test","address":"test","avg_grade":123},{"id":1581350316865,"first_name":"a","last_name":"b","address":"c","avg_grade":111}]
+[
+    {
+        "id": 1975481726,
+        "first_name": "Jonn",
+        "last_name": "Smith",
+        "location": {
+            "address": "str. Lombard 234",
+            "city": "San Fracisco",
+            "state": "California",
+            "country": "USA",
+            "coordinates": {
+                "lon": 3.468237846,
+                "lat": 3.468237846
+            }
+        },
+        "subjects": ["math", "history", "science"],
+        "avg_grade": 8.3
+    },
+    {
+        "id": 7635427863,
+        "first_name": "Sam",
+        "last_name": "Doe",
+        "address": "str. Blackhill 65",
+        "avg_grade": 9.6
+    },
+    {
+        "id": 5349583940,
+        "first_name": "Eve",
+        "last_name": "Jones",
+        "address": "str. Walters 21.32",
+        "avg_grade": 7
+    },
+    {
+        "id": 3742873930,
+        "first_name": "Jenna",
+        "last_name": "Dorsey",
+        "address": "str. Main 122",
+        "avg_grade": 10
+    },
+    {
+        "id": 1581350282929,
+        "first_name": "",
+        "last_name": "",
+        "address": "",
+        "avg_grade": 0
+    },
+    {
+        "id": 1581350297141,
+        "first_name": "test",
+        "last_name": "test",
+        "address": "test",
+        "avg_grade": 123
+    },
+    {
+        "id": 1581350316865,
+        "first_name": "a",
+        "last_name": "b",
+        "address": "c",
+        "avg_grade": 111
+    }
+]
