@@ -15,6 +15,7 @@ let app = express();
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static('public'));
+hbs.registerPartials(__dirname + '/views/partials');
 
 app.use((req, res, next) => {
     let whitelist = [
@@ -46,21 +47,22 @@ app.post('/', auth.apiLogin);
 
 app.get('/register', auth.viewRegister);
 app.post('/register', auth.apiRegister);
+app.get('/logout', auth.apiLogout);
 
 app.get('/dashboard', dashboard.viewDashboard);
 
 // from here to the end 
-app.get('/users/new', users.viewNewUser)
-app.post('/users/new', users.apiNewUser)
-app.get('/users/edit/:id', users.viewEditUser)
-app.post('/users/edit/:id', users.apiEditUser)
-app.get('/users/delete/:id', users.apiDeleteUser)
+// app.get('/users/new', users.viewNewUser)
+// app.post('/users/new', users.apiNewUser)
+// app.get('/users/edit/:id', users.viewEditUser)
+// app.post('/users/edit/:id', users.apiEditUser)
+// app.get('/users/delete/:id', users.apiDeleteUser)
 
-app.get('/blogposts/new', blogposts.viewNewBlogpost)
-app.post('/blogposts/new', blogposts.apiNewBlogpost)
-app.get('/blogposts/edit/:id', blogposts.viewEditBlogpost)
-app.post('/blogposts/edit/:id', blogposts.apiEditBlogpost)
-app.get('/blogposts/delete/:id', blogposts.apiDeleteBlogpost)
+// app.get('/blogposts/new', blogposts.viewNewBlogpost)
+// app.post('/blogposts/new', blogposts.apiNewBlogpost)
+// app.get('/blogposts/edit/:id', blogposts.viewEditBlogpost)
+// app.post('/blogposts/edit/:id', blogposts.apiEditBlogpost)
+// app.get('/blogposts/delete/:id', blogposts.apiDeleteBlogpost)
 
 app.listen(8080, (err) => {
     if(err){

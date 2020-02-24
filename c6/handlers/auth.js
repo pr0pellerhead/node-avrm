@@ -65,10 +65,16 @@ const apiRegister = (req, res) => {
     }
 }
 
+const apiLogout = (req, res) => {
+    res.clearCookie('jwt');
+    res.redirect('/');
+}
+
 module.exports = {
     viewLogin,
     apiLogin,
     viewRegister,
     apiRegister,
-    tokenKey
+    tokenKey,
+    apiLogout
 };
